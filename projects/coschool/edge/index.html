@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>EDGE - Coschool | Durga Venkatesh</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="EDGE - From Utility Tool to Prestige Ecosystem: Designing for High-Performance Students">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../../../assets/images/favicon/manifest.json">
+	<link rel="mask-icon" href="../../../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#0a0a0a">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+	<!-- Theme init -->
+	<script src="../../../assets/js/theme-init.js"></script>
+
+	<!-- Shared portfolio styles -->
+	<link rel="stylesheet" type="text/css" href="../../../assets/vendors/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/vendors/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+	<!-- Material Icons for shared nav -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Page-specific content styles (nav styles come from shared style.css) -->
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+		html { scroll-behavior: smooth; }
+
+		body {
+			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			background: #0a0a0a;
+			color: #d4d4d8;
+			line-height: 1.6;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		/* Hero */
+		.cs-hero {
+			position: relative;
+			width: 100%;
+			height: 65vh;
+			min-height: 400px;
+			overflow: hidden;
+			background: #18181b;
+			margin-top: 68px;
+		}
+		.cs-hero__img {
+			position: absolute; inset: 0;
+			width: 100%; height: 100%;
+			object-fit: cover;
+			opacity: 0.5;
+		}
+		.cs-hero__overlay {
+			position: absolute; inset: 0;
+			background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.4) 50%, transparent 100%);
+		}
+
+		/* Content Container */
+		.cs-container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 0 1.5rem;
+		}
+
+		/* Header */
+		.cs-header {
+			margin-top: -8rem;
+			position: relative;
+			z-index: 10;
+			margin-bottom: 4rem;
+		}
+		.cs-back {
+			display: inline-block;
+			color: #a1a1aa;
+			text-decoration: none;
+			font-size: 0.875rem;
+			font-weight: 500;
+			margin-bottom: 2rem;
+			transition: color 0.2s;
+		}
+		.cs-back:hover { color: #fafafa; }
+		.cs-tags {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 0.75rem;
+			margin-bottom: 1.5rem;
+		}
+		.cs-tag--company {
+			padding: 0.25rem 0.75rem;
+			font-size: 0.75rem;
+			font-weight: 500;
+			background: rgba(255,255,255,0.1);
+			color: #d4d4d8;
+			border-radius: 9999px;
+			backdrop-filter: blur(8px);
+			border: 1px solid rgba(255,255,255,0.1);
+		}
+		.cs-tag {
+			font-size: 0.75rem;
+			font-weight: 500;
+			color: #71717a;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
+		}
+		.cs-title {
+			font-size: clamp(2rem, 5vw, 3.5rem);
+			font-weight: 600;
+			letter-spacing: -0.03em;
+			color: #fafafa;
+			margin-bottom: 1rem;
+			line-height: 1.1;
+		}
+		.cs-subtitle {
+			font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+			color: #a1a1aa;
+			font-weight: 300;
+			letter-spacing: -0.01em;
+			max-width: 720px;
+		}
+
+		/* Overview Grid */
+		.cs-overview {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 3rem;
+			border-top: 1px solid rgba(39,39,42,0.6);
+			padding-top: 3rem;
+			margin-bottom: 6rem;
+		}
+		@media (min-width: 768px) {
+			.cs-overview { grid-template-columns: 2fr 1fr; }
+		}
+		.cs-label {
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: #71717a;
+			font-weight: 600;
+			margin-bottom: 1rem;
+		}
+		.cs-overview__text {
+			font-size: 1.125rem;
+			color: #d4d4d8;
+			line-height: 1.7;
+			max-width: 65ch;
+		}
+		.cs-meta { display: flex; flex-direction: column; gap: 1.5rem; }
+		.cs-meta__value { color: #f4f4f5; font-size: 1rem; }
+
+		/* Sections */
+		.cs-sections { margin-top: 4rem; }
+		.cs-section { margin-bottom: 6rem; }
+		.cs-section__title {
+			font-size: clamp(1.5rem, 3vw, 1.875rem);
+			font-weight: 500;
+			letter-spacing: -0.02em;
+			color: #fafafa;
+			margin-bottom: 2rem;
+		}
+		.cs-section__content {
+			font-size: 1.125rem;
+			color: #d4d4d8;
+			line-height: 1.7;
+			max-width: 65ch;
+			margin-bottom: 2rem;
+		}
+
+		/* Points Grid */
+		.cs-points {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1.25rem;
+			margin-bottom: 3rem;
+		}
+		@media (min-width: 640px) {
+			.cs-points { grid-template-columns: repeat(2, 1fr); }
+		}
+		@media (min-width: 960px) {
+			.cs-points--three { grid-template-columns: repeat(3, 1fr); }
+		}
+		.cs-point {
+			padding: 1.5rem;
+			border-radius: 1rem;
+			background: rgba(24,24,27,0.5);
+			border: 1px solid rgba(39,39,42,0.5);
+		}
+		.cs-point__title {
+			color: #f4f4f5;
+			font-weight: 500;
+			margin-bottom: 0.75rem;
+			font-size: 1rem;
+		}
+		.cs-point__desc {
+			color: #a1a1aa;
+			font-size: 0.875rem;
+			line-height: 1.6;
+		}
+
+		/* Table */
+		.cs-table-wrap {
+			overflow-x: auto;
+			margin-bottom: 3rem;
+			border: 1px solid rgba(39,39,42,0.5);
+			border-radius: 1rem;
+			background: rgba(24,24,27,0.3);
+		}
+		.cs-table {
+			width: 100%;
+			text-align: left;
+			border-collapse: collapse;
+		}
+		.cs-table thead tr {
+			border-bottom: 1px solid rgba(39,39,42,0.5);
+			background: rgba(24,24,27,0.5);
+		}
+		.cs-table th {
+			padding: 1rem;
+			font-size: 0.8rem;
+			font-weight: 600;
+			color: #d4d4d8;
+			text-transform: uppercase;
+			letter-spacing: 0.06em;
+		}
+		.cs-table tbody tr {
+			border-bottom: 1px solid rgba(39,39,42,0.3);
+			transition: background 0.2s;
+		}
+		.cs-table tbody tr:last-child { border-bottom: none; }
+		.cs-table tbody tr:hover { background: rgba(39,39,42,0.2); }
+		.cs-table td {
+			padding: 1rem;
+			font-size: 0.875rem;
+			color: #a1a1aa;
+		}
+
+		/* Metrics */
+		.cs-metrics {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.25rem;
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+		@media (min-width: 768px) {
+			.cs-metrics { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+		}
+		.cs-metric {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			padding: 1.5rem;
+			border-radius: 1rem;
+			background: rgba(24,24,27,0.5);
+			border: 1px solid rgba(39,39,42,0.5);
+		}
+		.cs-metric__value {
+			font-size: clamp(1.75rem, 4vw, 2.5rem);
+			font-weight: 600;
+			letter-spacing: -0.03em;
+			color: #f4f4f5;
+		}
+		.cs-metric__label {
+			font-size: 0.7rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: #71717a;
+			font-weight: 500;
+		}
+
+		/* Images */
+		.cs-images { margin-bottom: 2rem; }
+		.cs-image-wrap {
+			border-radius: 1rem;
+			overflow: hidden;
+			border: 1px solid rgba(39,39,42,0.5);
+			background: rgba(24,24,27,0.2);
+			margin-bottom: 2rem;
+		}
+		.cs-image-wrap img {
+			width: 100%;
+			height: auto;
+			display: block;
+			object-fit: cover;
+		}
+
+		/* Bottom Nav */
+		.cs-bottom-nav {
+			padding-top: 3rem;
+			border-top: 1px solid rgba(39,39,42,0.6);
+			display: flex;
+			justify-content: center;
+			padding-bottom: 6rem;
+		}
+		.cs-bottom-nav a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0.75rem 1.75rem;
+			border-radius: 9999px;
+			background: #fafafa;
+			color: #0a0a0a;
+			font-weight: 500;
+			text-decoration: none;
+			transition: background 0.2s;
+		}
+		.cs-bottom-nav a:hover { background: #d4d4d8; }
+
+		/* Scroll Animations */
+		.cs-fade-up {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+		}
+		.cs-fade-up.cs-visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		/* Mobile nav */
+		@media (max-width: 640px) {
+			.cs-hero { margin-top: 68px; }
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav id="header" class="header case-study nav-dark-forced">
+		<div class="container">
+			<div class="nav-left">
+				<div class="logo-wrapper valign-wrapper center-align">
+					<a href="../../../index.html" class="valign-wrapper">
+						<img class="logo" src="../../../assets/images/my-name.webp" loading="lazy">
+					</a>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-mobile">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../../index.html#work">coschool</a>
+					<a class="strike-through" href="../">back</a>
+					<a class="strike-through" href="../student/">next project</a>
+					<a class="strike-through" href="../../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-large">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../../index.html#work"><i class="material-icons float-right">dashboard</i></a>
+					<a class="strike-through" href="../"><i class="material-icons float-right">arrow_back</i></a>
+					<a class="strike-through" href="../student/"><i class="material-icons float-right">arrow_forward</i></a>
+					<a class="strike-through" href="../../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero -->
+	<div class="cs-hero">
+		<img src="./hero.png" alt="EDGE - Coschool" class="cs-hero__img" loading="eager">
+		<div class="cs-hero__overlay"></div>
+	</div>
+
+	<!-- Content -->
+	<div class="cs-container">
+
+		<!-- Header -->
+		<div class="cs-header cs-fade-up">
+			<a href="../" class="cs-back">← Back to Coschool</a>
+			<div class="cs-tags">
+				<span class="cs-tag--company">Coschool</span>
+				<span class="cs-tag">EdTech</span>
+				<span class="cs-tag">Gamification</span>
+				<span class="cs-tag">UX Strategy</span>
+			</div>
+			<h1 class="cs-title">EDGE - Coschool</h1>
+			<h2 class="cs-subtitle">From Utility Tool to Prestige Ecosystem: Designing for High-Performance Students</h2>
+		</div>
+
+		<!-- Overview & Metadata -->
+		<div class="cs-overview cs-fade-up">
+			<div>
+				<h3 class="cs-label">Overview</h3>
+				<p class="cs-overview__text">Coschool's "The Edge" is an elite, invite-only cohort experience designed to transform high-performing students into a prestigious community. By shifting the platform's value proposition from a "study tool" to a "status symbol," we aimed to drive high-value conversions and long-term retention through personalization, accountability, and gamification.</p>
+			</div>
+			<div class="cs-meta">
+				<div>
+					<h3 class="cs-label">Role</h3>
+					<p class="cs-meta__value">Lead UX Designer</p>
+				</div>
+				<div>
+					<h3 class="cs-label">Timeline</h3>
+					<p class="cs-meta__value">3 Months</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sections -->
+		<div class="cs-sections">
+
+			<!-- Section 1: The Challenge -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">01. The Challenge: The "Commodity Trap"</h3>
+				<p class="cs-section__content">Despite having a functional platform, Coschool was viewed as a utility—something students used when necessary, but didn't feel emotionally "locked" into. This led to:</p>
+				<div class="cs-points cs-points--three">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Low Conversion</h4>
+						<p class="cs-point__desc">Parents saw subscriptions as a recurring bill rather than an investment.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Churn Risk</h4>
+						<p class="cs-point__desc">Students lacked a "North Star" or a reason to stay once specific tasks were completed.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">The Mission</h4>
+						<p class="cs-point__desc">Create a high-performance environment that justifies premium pricing and fosters deep psychological buy-in.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 2: Research & Insights -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">02. Research & Insights: The Psychology of the "Elite Batch"</h3>
+				<p class="cs-section__content">I led competitor analysis and cohort studies with 15 school leaders to understand the cultural significance of "Special Batches" in education.</p>
+				<div class="cs-points cs-points--three">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Aspiration is the strongest driver</h4>
+						<p class="cs-point__desc">Parents and students in this demographic are motivated by status and exclusivity.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Accountability over Content</h4>
+						<p class="cs-point__desc">High-performers don't just want "more" content; they want better feedback and a way to measure their growth against their peers.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">The FOMO Factor</h4>
+						<p class="cs-point__desc">Exclusive features create a "loss aversion" effect. If a student loses their "Elite" status, they feel they are falling behind.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 3: Strategy -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">03. The Strategy: The Three Pillars of "The Edge"</h3>
+				<p class="cs-section__content">To solve the business objectives, I designed the experience around three core psychological levers:</p>
+				<div class="cs-table-wrap">
+					<table class="cs-table">
+						<thead>
+							<tr>
+								<th>Objective</th>
+								<th>Design Solution</th>
+								<th>Psychological Trigger</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Drive Conversion</td>
+								<td>Invite-Only Onboarding</td>
+								<td>Exclusivity: Transforms a purchase into a status symbol.</td>
+							</tr>
+							<tr>
+								<td>Fix Retention</td>
+								<td>Gamified Quizzes & Personalization</td>
+								<td>Investment: Users are less likely to leave an experience tailored to them.</td>
+							</tr>
+							<tr>
+								<td>Ensure Commitment</td>
+								<td>School Learning Index (SLI)</td>
+								<td>Identity: Students adopt a "High-Performer" persona they want to protect.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Section 4: The Solution -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">04. The Solution</h3>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">1. The High-Stakes Onboarding</h4>
+						<p class="cs-point__desc">I designed a formal commitment flow. Students aren't just "given" access; they are "invited." This creates a sense of achievement before the student even begins their first lesson.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">2. The School Learning Index (SLI) Dashboard</h4>
+						<p class="cs-point__desc">The SLI was designed to be the "Pulse" of the student's performance. Motivation over Punishment: Instead of a simple "Grade," the SLI uses growth-focused visualizations to show progress. Data-Driven ROI: This dashboard serves as a tangible report for parents, justifying the "Recharge" as a direct investment in measurable improvement.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">3. Personalized Learning Paths</h4>
+						<p class="cs-point__desc">Recognizing that "Elite" doesn't mean "Identical," the UI adapts to the student's pace, offering specialized tasks and feedback loops that aren't available in the standard version.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 5: Impact & Results -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">05. Impact & Results</h3>
+				<p class="cs-section__content">The feature launch showed immediate traction within the initial 40-school rollout:</p>
+				<div class="cs-metrics">
+					<div class="cs-metric">
+						<span class="cs-metric__value">10%</span>
+						<span class="cs-metric__label">Conversion Lift</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">40%</span>
+						<span class="cs-metric__label">High Engagement</span>
+					</div>
+				</div>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Qualitative Feedback</h4>
+						<p class="cs-point__desc">School leaders reported a significant increase in student motivation, with the "Invite-Only" tag acting as a primary driver for platform daily active usage (DAU).</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 6: Challenges & Reflections -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">06. Challenges & Reflections: Designing Exclusivity at Scale</h3>
+				<p class="cs-section__content">One of the primary design challenges was ensuring the "Elite" identity felt earned. If the barrier to entry was too low, the prestige evaporated; if it was too high, the conversion numbers suffered. We found the "sweet spot" by combining teacher curation with automated performance triggers.</p>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Gamification Wins</h4>
+						<p class="cs-point__desc">Students showed exceptional acceptance of gamified learning paths compared to traditional linear modules.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Personalization is the Future</h4>
+						<p class="cs-point__desc">Even among "Top 1%" students, learning styles vary wildly. Designing for varied skill levels within an elite cohort was crucial to success.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Bottom Navigation -->
+		<div class="cs-bottom-nav">
+			<a href="../">Explore More Work</a>
+		</div>
+
+	</div>
+
+	<!-- Scroll Animation Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var observer = new IntersectionObserver(function(entries) {
+				entries.forEach(function(entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('cs-visible');
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '-50px' });
+
+			document.querySelectorAll('.cs-fade-up').forEach(function(el) {
+				observer.observe(el);
+			});
+		});
+	</script>
+
+	<script>
+		(function() {
+			var saved = localStorage.getItem('portfolio-theme') || 'light';
+			document.documentElement.setAttribute('data-theme', saved);
+		})();
+		function toggleTheme() {
+			var current = document.documentElement.getAttribute('data-theme') || 'light';
+			var next = current === 'dark' ? 'light' : 'dark';
+			document.documentElement.setAttribute('data-theme', next);
+			localStorage.setItem('portfolio-theme', next);
+		}
+		document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+			btn.addEventListener('click', toggleTheme);
+		});
+	</script>
+</body>
+</html>

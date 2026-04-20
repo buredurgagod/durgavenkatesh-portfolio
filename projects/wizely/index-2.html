@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Wizely | Durga Venkatesh</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Wizely - Empowering users on their Financial Wellness journey">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../../assets/images/favicon/manifest.json">
+	<link rel="mask-icon" href="../../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#0a0a0a">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+	<!-- Theme init -->
+	<script src="../../assets/js/theme-init.js"></script>
+
+	<!-- Shared portfolio styles -->
+	<link rel="stylesheet" type="text/css" href="../../assets/vendors/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/vendors/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+	<!-- Material Icons for shared nav -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Page-specific content styles (nav styles come from shared style.css) -->
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #d4d4d8; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+		.cs-hero { position: relative; width: 100%; height: 65vh; min-height: 400px; overflow: hidden; background: #18181b; margin-top: 68px; }
+		.cs-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+		.cs-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.4) 50%, transparent 100%); }
+		.cs-container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+		.cs-header { margin-top: -8rem; position: relative; z-index: 10; margin-bottom: 4rem; }
+		.cs-back { display: inline-block; color: #a1a1aa; text-decoration: none; font-size: 0.875rem; font-weight: 500; margin-bottom: 2rem; transition: color 0.2s; }
+		.cs-back:hover { color: #fafafa; }
+		.cs-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+		.cs-tag--company { padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 500; background: rgba(255,255,255,0.1); color: #d4d4d8; border-radius: 9999px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); }
+		.cs-tag { font-size: 0.75rem; font-weight: 500; color: #71717a; text-transform: uppercase; letter-spacing: 0.08em; }
+		.cs-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 600; letter-spacing: -0.03em; color: #fafafa; margin-bottom: 1rem; line-height: 1.1; }
+		.cs-subtitle { font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: #a1a1aa; font-weight: 300; letter-spacing: -0.01em; max-width: 720px; }
+		.cs-overview { display: grid; grid-template-columns: 1fr; gap: 3rem; border-top: 1px solid rgba(39,39,42,0.6); padding-top: 3rem; margin-bottom: 6rem; }
+		@media (min-width: 768px) { .cs-overview { grid-template-columns: 2fr 1fr; } }
+		.cs-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #71717a; font-weight: 600; margin-bottom: 1rem; }
+		.cs-overview__text { font-size: 1.125rem; color: #d4d4d8; line-height: 1.7; max-width: 65ch; }
+		.cs-meta { display: flex; flex-direction: column; gap: 1.5rem; }
+		.cs-meta__value { color: #f4f4f5; font-size: 1rem; }
+		.cs-sections { margin-top: 4rem; }
+		.cs-section { margin-bottom: 6rem; }
+		.cs-section__title { font-size: clamp(1.5rem, 3vw, 1.875rem); font-weight: 500; letter-spacing: -0.02em; color: #fafafa; margin-bottom: 2rem; }
+		.cs-section__content { font-size: 1.125rem; color: #d4d4d8; line-height: 1.7; max-width: 65ch; margin-bottom: 2rem; }
+		.cs-points { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 3rem; }
+		@media (min-width: 640px) { .cs-points { grid-template-columns: repeat(2, 1fr); } }
+		@media (min-width: 960px) { .cs-points--three { grid-template-columns: repeat(3, 1fr); } }
+		.cs-point { padding: 1.5rem; border-radius: 1rem; background: rgba(24,24,27,0.5); border: 1px solid rgba(39,39,42,0.5); }
+		.cs-point__title { color: #f4f4f5; font-weight: 500; margin-bottom: 0.75rem; font-size: 1rem; }
+		.cs-point__desc { color: #a1a1aa; font-size: 0.875rem; line-height: 1.6; }
+		.cs-table-wrap { overflow-x: auto; margin-bottom: 3rem; border: 1px solid rgba(39,39,42,0.5); border-radius: 1rem; background: rgba(24,24,27,0.3); }
+		.cs-table { width: 100%; text-align: left; border-collapse: collapse; }
+		.cs-table thead tr { border-bottom: 1px solid rgba(39,39,42,0.5); background: rgba(24,24,27,0.5); }
+		.cs-table th { padding: 1rem; font-size: 0.8rem; font-weight: 600; color: #d4d4d8; text-transform: uppercase; letter-spacing: 0.06em; }
+		.cs-table tbody tr { border-bottom: 1px solid rgba(39,39,42,0.3); transition: background 0.2s; }
+		.cs-table tbody tr:last-child { border-bottom: none; }
+		.cs-table tbody tr:hover { background: rgba(39,39,42,0.2); }
+		.cs-table td { padding: 1rem; font-size: 0.875rem; color: #a1a1aa; }
+		.cs-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 3rem; text-align: center; }
+		@media (min-width: 768px) { .cs-metrics { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
+		.cs-metric { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; border-radius: 1rem; background: rgba(24,24,27,0.5); border: 1px solid rgba(39,39,42,0.5); }
+		.cs-metric__value { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; letter-spacing: -0.03em; color: #f4f4f5; }
+		.cs-metric__label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #71717a; font-weight: 500; }
+		.cs-images { margin-bottom: 2rem; }
+		.cs-image-wrap { border-radius: 1rem; overflow: hidden; border: 1px solid rgba(39,39,42,0.5); background: rgba(24,24,27,0.2); margin-bottom: 2rem; }
+		.cs-image-wrap img { width: 100%; height: auto; display: block; object-fit: cover; }
+		.cs-bottom-nav { padding-top: 3rem; border-top: 1px solid rgba(39,39,42,0.6); display: flex; justify-content: center; padding-bottom: 6rem; }
+		.cs-bottom-nav a { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.75rem; border-radius: 9999px; background: #fafafa; color: #0a0a0a; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+		.cs-bottom-nav a:hover { background: #d4d4d8; }
+		.cs-fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+		.cs-fade-up.cs-visible { opacity: 1; transform: translateY(0); }
+		@media (max-width: 640px) { .cs-hero { margin-top: 68px; } }
+	</style>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav id="header" class="header case-study nav-dark-forced">
+		<div class="container">
+			<div class="nav-left">
+				<div class="logo-wrapper valign-wrapper center-align">
+					<a href="../../index.html" class="valign-wrapper">
+						<img class="logo" src="../../assets/images/my-name.webp" loading="lazy">
+					</a>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-mobile">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../index.html#work">all projects</a>
+					<a class="strike-through" href="../../index.html#work">back</a>
+					<a class="strike-through" href="../signzy/">next project</a>
+					<a class="strike-through" href="../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-large">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../index.html#work"><i class="material-icons float-right">dashboard</i></a>
+					<a class="strike-through" href="../../index.html#work"><i class="material-icons float-right">arrow_back</i></a>
+					<a class="strike-through" href="../signzy/"><i class="material-icons float-right">arrow_forward</i></a>
+					<a class="strike-through" href="../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero -->
+	<div class="cs-hero">
+		<img src="./images/Section 1.webp" alt="Wizely" class="cs-hero__img" loading="eager">
+		<div class="cs-hero__overlay"></div>
+	</div>
+
+	<!-- Content -->
+	<div class="cs-container">
+
+		<!-- Header -->
+		<div class="cs-header cs-fade-up">
+			<a href="../../index.html#work" class="cs-back">← Back to Work</a>
+			<div class="cs-tags">
+				<span class="cs-tag--company">Wizely</span>
+				<span class="cs-tag">FinTech</span>
+				<span class="cs-tag">Gamification</span>
+				<span class="cs-tag">Financial Wellness</span>
+			</div>
+			<h1 class="cs-title">Wizely</h1>
+			<h2 class="cs-subtitle">Empowering users on their Financial Wellness journey</h2>
+		</div>
+
+		<!-- Overview & Metadata -->
+		<div class="cs-overview cs-fade-up">
+			<div>
+				<h3 class="cs-label">Overview</h3>
+				<p class="cs-overview__text">Wizely is a financial Wellness platform for users who are new to their Financial Wellness journey which helps users set budgets, spend money responsibly and save towards their goals. Initially, we started out as a small platform that helps users to set budgets, track them and save in Fixed and Recurring deposits. We wanted to expand and become a platform that users can rely on to understand the basics of Financial Wellness and start saving / investing with us.</p>
+			</div>
+			<div class="cs-meta">
+				<div>
+					<h3 class="cs-label">Role</h3>
+					<p class="cs-meta__value">Lead UX Designer</p>
+				</div>
+				<div>
+					<h3 class="cs-label">Timeline</h3>
+					<p class="cs-meta__value">6 Months</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sections -->
+		<div class="cs-sections">
+
+			<!-- Section 1: User Problems -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">01. User Problems</h3>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Budgeting & Saving Ignorance</h4>
+						<p class="cs-point__desc">A lot of users didn't know how to set realistic budgets and were unaware that they need to save in different instruments for better returns.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Trust Deficit</h4>
+						<p class="cs-point__desc">Users had problems trusting the platform to start saving.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Financial Literacy Gap</h4>
+						<p class="cs-point__desc">Users new to their financial journey didn't understand the concept of Credit score and had difficulty understanding the term Financial Wellness.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Lack of Motivation</h4>
+						<p class="cs-point__desc">Most users were not motivated to stay on the path towards Financial Wellness.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 2: Approach & Personas -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">02. Approach & Personas</h3>
+				<p class="cs-section__content">I leverage the IDF's Design Thinking approach (Empathize, Define, Ideate, Prototype, Test) to tackle all User experience challenges, ensuring a user-centric approach to solving all UX issues.</p>
+				<div class="cs-table-wrap">
+					<table class="cs-table">
+						<thead>
+							<tr>
+								<th>Persona</th>
+								<th>Occupation</th>
+								<th>Financial Knowledge</th>
+								<th>Financial Goals</th>
+								<th>Pain Points</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>New Graduate Student</td>
+								<td>Recent college graduate</td>
+								<td>Low - Limited understanding of budgeting, saving, and financial products.</td>
+								<td>Short-term: Pay off student loans, build emergency fund. Long-term: Save for a car or travel.</td>
+								<td>Feels overwhelmed by financial decisions. Unsure how to budget her new income. Wants to avoid getting into debt.</td>
+							</tr>
+							<tr>
+								<td>Budgeting Beginner</td>
+								<td>Marketing professional</td>
+								<td>Basic - Spends more than he saves. Has some credit card debt.</td>
+								<td>Get out of debt, create a budget, start saving for retirement.</td>
+								<td>Feels like he lives paycheck to paycheck. Doesn't know how to create a realistic budget. Struggles to track spending.</td>
+							</tr>
+							<tr>
+								<td>Savings Beginner</td>
+								<td>Teacher</td>
+								<td>Moderate - Understands importance of saving but lacks a plan.</td>
+								<td>Save for a down payment on a house. Invest for long-term financial security.</td>
+								<td>Feels paralyzed by different saving options. Worries about making wrong investment decisions. Needs guidance.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Section 3: Ideation -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">03. Ideation</h3>
+				<p class="cs-section__content">Here's what we wanted to add to make the app more relevant to the users:</p>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Wellness Score</h4>
+						<p class="cs-point__desc">Introduced Wellness Score concept to help users understand where they are in their journey towards Financial Wellness.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Gamification</h4>
+						<p class="cs-point__desc">Added gamification mechanics to make it more interesting and rewarding for users to stick on their path to Financial Wellness. Issued rewards for completing certain challenges.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Information Hierarchy</h4>
+						<p class="cs-point__desc">Rearranged the information according to the user needs and importance on the dashboard.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Blogs</h4>
+						<p class="cs-point__desc">Created and maintained WizeUp for educating users about Financial Wellness.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 4: Dashboard Revamp -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">04. Dashboard Revamp</h3>
+				<p class="cs-section__content">In the past, the Wizely dashboard offered a basic view with just a budget graph and account balances pulled from SMS data. To enhance the user experience and promote financial well-being, we've revamped the dashboard with a focus on two key features. This shift in focus goes beyond just displaying data. We've created a dedicated 'Spending' tab within the dashboard. This tab houses all the spending analytics and budgeting tools, allowing users to delve deeper into their financial habits and make informed spending choices.</p>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Wellness Score</h4>
+						<p class="cs-point__desc">This new metric provides a clear picture of a user's financial health. The redesigned dashboard prominently displays the Wellness Score, along with explanations to help users understand its significance and how it can guide them towards better financial decisions.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Wizely Wednesdays</h4>
+						<p class="cs-point__desc">To make financial wellness journey engaging, we introduced Wizely Wednesdays, a weekly lucky draw where users can win exciting rewards for completing tasks that improve their Wellness Score. Each week, users receive personalized tasks based on their current score, motivating them to take action and reach better score.</p>
+					</div>
+				</div>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 1.webp" alt="Dashboard - 1" loading="lazy"></div>
+				</div>
+				<div class="cs-metrics">
+					<div class="cs-metric">
+						<span class="cs-metric__value">+32%</span>
+						<span class="cs-metric__label">User actions</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+40%</span>
+						<span class="cs-metric__label">Daily User App open</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+25%</span>
+						<span class="cs-metric__label">Saving in Gold</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+13%</span>
+						<span class="cs-metric__label">User Retention</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 5: Enhanced Spending Insights -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">05. Enhanced Spending Insights</h3>
+				<p class="cs-section__content">Previously, the dashboard presented a basic view of spending with graphs alongside set budgets and account balances. The new Spending Tab takes this a step further, offering a more comprehensive perspective on users finances.</p>
+				<div class="cs-points cs-points--three">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Budget vs. Actual Spending</h4>
+						<p class="cs-point__desc">Get a clear picture of how spending aligns with your set budget. See how much money remains within your allocated budget.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Account Balances</h4>
+						<p class="cs-point__desc">View current balances for both credit cards and bank accounts in one central section.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Transaction Overview</h4>
+						<p class="cs-point__desc">Gain valuable insights into spending habits. This feature allows users to deep dive into their transaction history, identify areas for potential reduction, and make informed decisions about their spending.</p>
+					</div>
+				</div>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 2.webp" alt="Spending - 1" loading="lazy"></div>
+				</div>
+				<div class="cs-metrics">
+					<div class="cs-metric">
+						<span class="cs-metric__value">99%</span>
+						<span class="cs-metric__label">Users Setting Budget</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">98%</span>
+						<span class="cs-metric__label">SMS Permission</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 6: Savings Tab -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">06. Savings Tab</h3>
+				<p class="cs-section__content">Revamped the UI of Savings tab with more focus on Saving in Digital Gold. This was to encourage users to start saving with as little as possible and get habituated to saving. The new Savings tab also had focus on saving towards goals. This enables users to set goals and start saving towards them in an orderly manner.</p>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 3.webp" alt="Savings - 1" loading="lazy"></div>
+				</div>
+				<div class="cs-metrics">
+					<div class="cs-metric">
+						<span class="cs-metric__value">+55%</span>
+						<span class="cs-metric__label">Saving in Gold</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+20%</span>
+						<span class="cs-metric__label">Saving in Piggy Bank</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+8%</span>
+						<span class="cs-metric__label">Emergency Plan Savings</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 7: Rewards and Challenges -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">07. Rewards and Challenges</h3>
+				<p class="cs-section__content">We've introduced exciting gamification mechanics to make saving more engaging. We added rewards tab for users to collect their rewards and redeem them as gold. Users were given scratch cards for completing different actions or achieving different milestones. These scratch cards rewards were accumulated in the rewards tab enabling users to redeem then as they needed.</p>
+				<div class="cs-metrics">
+					<div class="cs-metric">
+						<span class="cs-metric__value">85%</span>
+						<span class="cs-metric__label">1st reward claim rate</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">65%</span>
+						<span class="cs-metric__label">2nd reward claim rate</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+80%</span>
+						<span class="cs-metric__label">Users completing ≥2 tasks</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 8: Overall Metrics -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">08. Overall Metrics and Improvements</h3>
+				<div class="cs-table-wrap">
+					<table class="cs-table">
+						<thead>
+							<tr>
+								<th>Metric</th>
+								<th>Previous</th>
+								<th>Current</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>User drop-off rate (Before 7 days)</td>
+								<td>60%</td>
+								<td>22%</td>
+							</tr>
+							<tr>
+								<td>SMS Permission</td>
+								<td>30%</td>
+								<td>98%</td>
+							</tr>
+							<tr>
+								<td>1st reward claim rate</td>
+								<td>40%</td>
+								<td>85%</td>
+							</tr>
+							<tr>
+								<td>Saving plan creation</td>
+								<td>3%</td>
+								<td>12%</td>
+							</tr>
+							<tr>
+								<td>User retention rate (3 weeks)</td>
+								<td>12%</td>
+								<td>31%</td>
+							</tr>
+							<tr>
+								<td>Weekly active users (app open)</td>
+								<td>24%</td>
+								<td>65%</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Bottom Navigation -->
+		<div class="cs-bottom-nav">
+			<a href="../../index.html#work">Explore More Work</a>
+		</div>
+
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var observer = new IntersectionObserver(function(entries) {
+				entries.forEach(function(entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('cs-visible');
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '-50px' });
+			document.querySelectorAll('.cs-fade-up').forEach(function(el) {
+				observer.observe(el);
+			});
+		});
+	</script>
+
+	<script>
+		(function() {
+			var saved = localStorage.getItem('portfolio-theme') || 'light';
+			document.documentElement.setAttribute('data-theme', saved);
+		})();
+		function toggleTheme() {
+			var current = document.documentElement.getAttribute('data-theme') || 'light';
+			var next = current === 'dark' ? 'light' : 'dark';
+			document.documentElement.setAttribute('data-theme', next);
+			localStorage.setItem('portfolio-theme', next);
+		}
+		document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+			btn.addEventListener('click', toggleTheme);
+		});
+	</script>
+</body>
+</html>

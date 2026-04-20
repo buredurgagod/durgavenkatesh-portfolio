@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Student - Coschool | Durga Venkatesh</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Student - Coschool: Transforming a static learning hub into an intelligent, adaptive assistant">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../../../assets/images/favicon/manifest.json">
+	<link rel="mask-icon" href="../../../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#0a0a0a">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+	<!-- Theme init -->
+	<script src="../../../assets/js/theme-init.js"></script>
+
+	<!-- Shared portfolio styles -->
+	<link rel="stylesheet" type="text/css" href="../../../assets/vendors/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/vendors/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+	<!-- Material Icons for shared nav -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Page-specific content styles (nav styles come from shared style.css) -->
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #d4d4d8; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+		.cs-hero { position: relative; width: 100%; height: 65vh; min-height: 400px; overflow: hidden; background: #18181b; margin-top: 68px; }
+		.cs-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+		.cs-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.4) 50%, transparent 100%); }
+		.cs-container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+		.cs-header { margin-top: -8rem; position: relative; z-index: 10; margin-bottom: 4rem; }
+		.cs-back { display: inline-block; color: #a1a1aa; text-decoration: none; font-size: 0.875rem; font-weight: 500; margin-bottom: 2rem; transition: color 0.2s; }
+		.cs-back:hover { color: #fafafa; }
+		.cs-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+		.cs-tag--company { padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 500; background: rgba(255,255,255,0.1); color: #d4d4d8; border-radius: 9999px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); }
+		.cs-tag { font-size: 0.75rem; font-weight: 500; color: #71717a; text-transform: uppercase; letter-spacing: 0.08em; }
+		.cs-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 600; letter-spacing: -0.03em; color: #fafafa; margin-bottom: 1rem; line-height: 1.1; }
+		.cs-subtitle { font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: #a1a1aa; font-weight: 300; letter-spacing: -0.01em; max-width: 720px; }
+		.cs-overview { display: grid; grid-template-columns: 1fr; gap: 3rem; border-top: 1px solid rgba(39,39,42,0.6); padding-top: 3rem; margin-bottom: 6rem; }
+		@media (min-width: 768px) { .cs-overview { grid-template-columns: 2fr 1fr; } }
+		.cs-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #71717a; font-weight: 600; margin-bottom: 1rem; }
+		.cs-overview__text { font-size: 1.125rem; color: #d4d4d8; line-height: 1.7; max-width: 65ch; }
+		.cs-meta { display: flex; flex-direction: column; gap: 1.5rem; }
+		.cs-meta__value { color: #f4f4f5; font-size: 1rem; }
+		.cs-sections { margin-top: 4rem; }
+		.cs-section { margin-bottom: 6rem; }
+		.cs-section__title { font-size: clamp(1.5rem, 3vw, 1.875rem); font-weight: 500; letter-spacing: -0.02em; color: #fafafa; margin-bottom: 2rem; }
+		.cs-section__content { font-size: 1.125rem; color: #d4d4d8; line-height: 1.7; max-width: 65ch; margin-bottom: 2rem; }
+		.cs-points { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 3rem; }
+		@media (min-width: 640px) { .cs-points { grid-template-columns: repeat(2, 1fr); } }
+		@media (min-width: 960px) { .cs-points--three { grid-template-columns: repeat(3, 1fr); } }
+		.cs-point { padding: 1.5rem; border-radius: 1rem; background: rgba(24,24,27,0.5); border: 1px solid rgba(39,39,42,0.5); }
+		.cs-point__title { color: #f4f4f5; font-weight: 500; margin-bottom: 0.75rem; font-size: 1rem; }
+		.cs-point__desc { color: #a1a1aa; font-size: 0.875rem; line-height: 1.6; }
+		.cs-table-wrap { overflow-x: auto; margin-bottom: 3rem; border: 1px solid rgba(39,39,42,0.5); border-radius: 1rem; background: rgba(24,24,27,0.3); }
+		.cs-table { width: 100%; text-align: left; border-collapse: collapse; }
+		.cs-table thead tr { border-bottom: 1px solid rgba(39,39,42,0.5); background: rgba(24,24,27,0.5); }
+		.cs-table th { padding: 1rem; font-size: 0.8rem; font-weight: 600; color: #d4d4d8; text-transform: uppercase; letter-spacing: 0.06em; }
+		.cs-table tbody tr { border-bottom: 1px solid rgba(39,39,42,0.3); transition: background 0.2s; }
+		.cs-table tbody tr:last-child { border-bottom: none; }
+		.cs-table tbody tr:hover { background: rgba(39,39,42,0.2); }
+		.cs-table td { padding: 1rem; font-size: 0.875rem; color: #a1a1aa; }
+		.cs-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 3rem; text-align: center; }
+		@media (min-width: 768px) { .cs-metrics { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
+		.cs-metric { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; border-radius: 1rem; background: rgba(24,24,27,0.5); border: 1px solid rgba(39,39,42,0.5); }
+		.cs-metric__value { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; letter-spacing: -0.03em; color: #f4f4f5; }
+		.cs-metric__label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #71717a; font-weight: 500; }
+		.cs-images { margin-bottom: 2rem; }
+		.cs-image-wrap { border-radius: 1rem; overflow: hidden; border: 1px solid rgba(39,39,42,0.5); background: rgba(24,24,27,0.2); margin-bottom: 2rem; }
+		.cs-image-wrap img { width: 100%; height: auto; display: block; object-fit: cover; }
+		.cs-bottom-nav { padding-top: 3rem; border-top: 1px solid rgba(39,39,42,0.6); display: flex; justify-content: center; padding-bottom: 6rem; }
+		.cs-bottom-nav a { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.75rem; border-radius: 9999px; background: #fafafa; color: #0a0a0a; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+		.cs-bottom-nav a:hover { background: #d4d4d8; }
+		.cs-fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+		.cs-fade-up.cs-visible { opacity: 1; transform: translateY(0); }
+		@media (max-width: 640px) { .cs-hero { margin-top: 68px; } }
+	</style>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav id="header" class="header case-study nav-dark-forced">
+		<div class="container">
+			<div class="nav-left">
+				<div class="logo-wrapper valign-wrapper center-align">
+					<a href="../../../index.html" class="valign-wrapper">
+						<img class="logo" src="../../../assets/images/my-name.webp" loading="lazy">
+					</a>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-mobile">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../../index.html#work">coschool</a>
+					<a class="strike-through" href="../">back</a>
+					<a class="strike-through" href="../edge/">previous project</a>
+					<a class="strike-through" href="../../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-large">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../../index.html#work"><i class="material-icons float-right">dashboard</i></a>
+					<a class="strike-through" href="../"><i class="material-icons float-right">arrow_back</i></a>
+					<a class="strike-through" href="../edge/"><i class="material-icons float-right">arrow_forward</i></a>
+					<a class="strike-through" href="../../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero -->
+	<div class="cs-hero">
+		<img src="./hero.png" alt="Student - Coschool" class="cs-hero__img" loading="eager">
+		<div class="cs-hero__overlay"></div>
+	</div>
+
+	<!-- Content -->
+	<div class="cs-container">
+
+		<!-- Header -->
+		<div class="cs-header cs-fade-up">
+			<a href="../" class="cs-back">← Back to Coschool</a>
+			<div class="cs-tags">
+				<span class="cs-tag--company">Coschool</span>
+				<span class="cs-tag">EdTech</span>
+				<span class="cs-tag">Dashboard Design</span>
+				<span class="cs-tag">UX Strategy</span>
+			</div>
+			<h1 class="cs-title">Student - Coschool</h1>
+			<h2 class="cs-subtitle">Transforming a static learning hub into an intelligent, adaptive assistant</h2>
+		</div>
+
+		<!-- Overview & Metadata -->
+		<div class="cs-overview cs-fade-up">
+			<div>
+				<h3 class="cs-label">Overview</h3>
+				<p class="cs-overview__text">Redesigned the core student dashboard for an EdTech platform serving 10,000+ students across 40 schools in India, shifting from a static, feature-heavy interface to an agent-driven, context-aware learning assistant. Collaborated with 4 Designers and cross-functional stakeholders.</p>
+			</div>
+			<div class="cs-meta">
+				<div>
+					<h3 class="cs-label">Role</h3>
+					<p class="cs-meta__value">Lead UX Designer</p>
+				</div>
+				<div>
+					<h3 class="cs-label">Timeline</h3>
+					<p class="cs-meta__value">4 Months</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sections -->
+		<div class="cs-sections">
+
+			<!-- Section 1: Problem Statement -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">01. The Problem Statement</h3>
+				<p class="cs-section__content">As the platform scaled, multiple learning experiences were introduced—Homework, Self Study, Revision, Assessments, Edge cohort—leading to a fragmented and cluttered dashboard. A static dashboard failed to adapt to diverse student needs, resulting in poor discoverability, high cognitive load, and lack of clear next actions.</p>
+			</div>
+
+			<!-- Section 2: Goals & Success Metrics -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">02. Goals & Success Metrics</h3>
+				<div class="cs-table-wrap">
+					<table class="cs-table">
+						<thead>
+							<tr>
+								<th>Product Goals</th>
+								<th>UX Goals</th>
+								<th>Business Goals</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Transition from tool → intelligent assistant</td>
+								<td>Reduce cognitive overload</td>
+								<td>Increase DAU and retention</td>
+							</tr>
+							<tr>
+								<td>Deliver context-aware experiences</td>
+								<td>Guide students via a clear learning path</td>
+								<td>Improve feature adoption</td>
+							</tr>
+							<tr>
+								<td>Improve feature discoverability</td>
+								<td>Enable quick, actionable insights</td>
+								<td>Reduce support queries</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Section 3: Research & Insights -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">03. Research & Insights</h3>
+				<p class="cs-section__content">Using session recordings (Microsoft Clarity), contextual observation, and feature usage analytics, we uncovered a key insight: Students don't want options — they want direction.</p>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Discoverability Issues</h4>
+						<p class="cs-point__desc">Students frequently missed or ignored features due to low visibility.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Cognitive Overload</h4>
+						<p class="cs-point__desc">Too many options presented with equal priority caused decision paralysis.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Poor Navigation Model</h4>
+						<p class="cs-point__desc">Navigation relied on recall instead of recognition, making it unintuitive.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Lack of Direction</h4>
+						<p class="cs-point__desc">Students struggled to identify what to do next and what matters now.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 4: Design Process & Transformation -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">04. Design Process & Transformation</h3>
+				<p class="cs-section__content">We mapped student journeys across daily homework, exam prep, and concept learning. We then re-structured the IA around the academic timeline, learning intent, and user context over 5 design iterations.</p>
+				<div class="cs-table-wrap">
+					<table class="cs-table">
+						<thead>
+							<tr>
+								<th>Before: Static & Feature-Centric</th>
+								<th>After: Contextual & Guided</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Feature-heavy layout</td>
+								<td>Context-aware sections (Homework, EDGE, Revision)</td>
+							</tr>
+							<tr>
+								<td>Equal visual weight for all actions</td>
+								<td>Clear prioritization</td>
+							</tr>
+							<tr>
+								<td>No prioritization</td>
+								<td>Action-oriented design</td>
+							</tr>
+							<tr>
+								<td>High cognitive load</td>
+								<td>Reduced friction</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<!-- Section 5: The Solution -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">05. The Solution</h3>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Agent-Driven Navigation</h4>
+						<p class="cs-point__desc">Replaced passive browsing with guided actions (e.g., 'Revise this chapter'). Reduced search effort and improved clarity.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Contextual Grouping</h4>
+						<p class="cs-point__desc">Content dynamically organized based on current academic phase and student progress. Ensures relevance and reduces clutter.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Progressive Disclosure</h4>
+						<p class="cs-point__desc">Only relevant features surfaced; secondary actions de-prioritized to eliminate overwhelm.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Actionable Insights Layer</h4>
+						<p class="cs-point__desc">Performance summaries, study patterns, and revision progress help students self-regulate learning.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Gamification & Ownership</h4>
+						<p class="cs-point__desc">Progress indicators and streak-based motivation encourage consistent engagement.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Breaking the Blank Canvas</h4>
+						<p class="cs-point__desc">Introduced recent activity, upcoming tasks, and smart suggestions to eliminate confusion at entry point.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 6: Challenges & Trade-offs -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">06. Challenges & Trade-offs</h3>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Business vs UX</h4>
+						<p class="cs-point__desc">Balanced high feature visibility with simplicity via progressive disclosure and contextual surfacing.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Diverse User Needs</h4>
+						<p class="cs-point__desc">Designed for both high performers (exploration-driven) and struggling students (guidance-driven) using an adaptive, flexible layout.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Dynamic UI Complexity</h4>
+						<p class="cs-point__desc">Made the dashboard adaptive yet predictable through structured modular sections.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Paid vs Unpaid Experience</h4>
+						<p class="cs-point__desc">Showcased premium value without degrading the core experience, ensuring the homework flow remained uninterrupted.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Section 7: Expected Impact & Reflection -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">07. Expected Impact & Reflection</h3>
+				<p class="cs-section__content">Pre-launch expectations point to increased engagement through relevant content, better feature usage via visibility, decreased navigation time, and higher learning consistency.</p>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Key Learning: Low-Resistance Paths</h4>
+						<p class="cs-point__desc">Users create their own 'low-resistance paths' — design should enable, not control. This led to thinking around flexible layouts and user-driven prioritization.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Key Learning: Designing at Scale</h4>
+						<p class="cs-point__desc">As features grow, UI must shift from feature-based to intent-based. Structure becomes more important than visuals.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Bottom Navigation -->
+		<div class="cs-bottom-nav">
+			<a href="../">Explore More Work</a>
+		</div>
+
+	</div>
+
+	<!-- Scroll Animation Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var observer = new IntersectionObserver(function(entries) {
+				entries.forEach(function(entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('cs-visible');
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '-50px' });
+
+			document.querySelectorAll('.cs-fade-up').forEach(function(el) {
+				observer.observe(el);
+			});
+		});
+	</script>
+
+	<script>
+		(function() {
+			var saved = localStorage.getItem('portfolio-theme') || 'light';
+			document.documentElement.setAttribute('data-theme', saved);
+		})();
+		function toggleTheme() {
+			var current = document.documentElement.getAttribute('data-theme') || 'light';
+			var next = current === 'dark' ? 'light' : 'dark';
+			document.documentElement.setAttribute('data-theme', next);
+			localStorage.setItem('portfolio-theme', next);
+		}
+		document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+			btn.addEventListener('click', toggleTheme);
+		});
+	</script>
+</body>
+</html>

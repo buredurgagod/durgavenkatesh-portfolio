@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>A23 Rummy | Durga Venkatesh</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="A23 Rummy - Simplifying Complexity to Drive Retention & Trust">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../../../assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../../../assets/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="../../../assets/images/favicon/manifest.json">
+	<link rel="mask-icon" href="../../../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#0a0a0a">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Page-specific content styles (nav styles come from shared style.css) -->
+	<style>
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		html { scroll-behavior: smooth; }
+		body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #d4d4d8; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+		.cs-hero { position: relative; width: 100%; height: 65vh; min-height: 400px; overflow: hidden; background: #18181b; margin-top: 68px; }
+		.cs-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
+		.cs-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, #0a0a0a 0%, rgba(10,10,10,0.4) 50%, transparent 100%); }
+		.cs-container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+		.cs-header { margin-top: -8rem; position: relative; z-index: 10; margin-bottom: 4rem; }
+		.cs-back { display: inline-block; color: #a1a1aa; text-decoration: none; font-size: 0.875rem; font-weight: 500; margin-bottom: 2rem; transition: color 0.2s; }
+		.cs-back:hover { color: #fafafa; }
+		.cs-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+		.cs-tag--company { padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 500; background: rgba(255,255,255,0.1); color: #d4d4d8; border-radius: 9999px; backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); }
+		.cs-tag { font-size: 0.75rem; font-weight: 500; color: #71717a; text-transform: uppercase; letter-spacing: 0.08em; }
+		.cs-title { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 600; letter-spacing: -0.03em; color: #fafafa; margin-bottom: 1rem; line-height: 1.1; }
+		.cs-subtitle { font-size: clamp(1.125rem, 2.5vw, 1.5rem); color: #a1a1aa; font-weight: 300; letter-spacing: -0.01em; max-width: 720px; }
+		.cs-overview { display: grid; grid-template-columns: 1fr; gap: 3rem; border-top: 1px solid rgba(39,39,42,0.6); padding-top: 3rem; margin-bottom: 6rem; }
+		@media (min-width: 768px) { .cs-overview { grid-template-columns: 2fr 1fr; } }
+		.cs-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #71717a; font-weight: 600; margin-bottom: 1rem; }
+		.cs-overview__text { font-size: 1.125rem; color: #d4d4d8; line-height: 1.7; max-width: 65ch; }
+		.cs-meta { display: flex; flex-direction: column; gap: 1.5rem; }
+		.cs-meta__value { color: #f4f4f5; font-size: 1rem; }
+		.cs-sections { margin-top: 4rem; }
+		.cs-section { margin-bottom: 6rem; }
+		.cs-section__title { font-size: clamp(1.5rem, 3vw, 1.875rem); font-weight: 500; letter-spacing: -0.02em; color: #fafafa; margin-bottom: 2rem; }
+		.cs-section__content { font-size: 1.125rem; color: #d4d4d8; line-height: 1.7; max-width: 65ch; margin-bottom: 2rem; }
+		.cs-points { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 3rem; }
+		@media (min-width: 640px) { .cs-points { grid-template-columns: repeat(2, 1fr); } }
+		@media (min-width: 960px) { .cs-points--three { grid-template-columns: repeat(3, 1fr); } }
+		.cs-point { padding: 1.5rem; border-radius: 1rem; background: rgba(24,24,27,0.5); border: 1px solid rgba(39,39,42,0.5); }
+		.cs-point__title { color: #f4f4f5; font-weight: 500; margin-bottom: 0.75rem; font-size: 1rem; }
+		.cs-point__desc { color: #a1a1aa; font-size: 0.875rem; line-height: 1.6; }
+		.cs-table-wrap { overflow-x: auto; margin-bottom: 3rem; border: 1px solid rgba(39,39,42,0.5); border-radius: 1rem; background: rgba(24,24,27,0.3); }
+		.cs-table { width: 100%; text-align: left; border-collapse: collapse; }
+		.cs-table thead tr { border-bottom: 1px solid rgba(39,39,42,0.5); background: rgba(24,24,27,0.5); }
+		.cs-table th { padding: 1rem; font-size: 0.8rem; font-weight: 600; color: #d4d4d8; text-transform: uppercase; letter-spacing: 0.06em; }
+		.cs-table tbody tr { border-bottom: 1px solid rgba(39,39,42,0.3); transition: background 0.2s; }
+		.cs-table tbody tr:last-child { border-bottom: none; }
+		.cs-table tbody tr:hover { background: rgba(39,39,42,0.2); }
+		.cs-table td { padding: 1rem; font-size: 0.875rem; color: #a1a1aa; }
+		.cs-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 3rem; text-align: center; }
+		@media (min-width: 768px) { .cs-metrics { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
+		.cs-metric { display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; border-radius: 1rem; background: rgba(24,24,27,0.5); border: 1px solid rgba(39,39,42,0.5); }
+		.cs-metric__value { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 600; letter-spacing: -0.03em; color: #f4f4f5; }
+		.cs-metric__label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: #71717a; font-weight: 500; }
+		.cs-images { margin-bottom: 2rem; }
+		.cs-image-wrap { border-radius: 1rem; overflow: hidden; border: 1px solid rgba(39,39,42,0.5); background: rgba(24,24,27,0.2); margin-bottom: 2rem; }
+		.cs-image-wrap img { width: 100%; height: auto; display: block; object-fit: cover; }
+		.cs-bottom-nav { padding-top: 3rem; border-top: 1px solid rgba(39,39,42,0.6); display: flex; justify-content: center; padding-bottom: 6rem; }
+		.cs-bottom-nav a { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.75rem; border-radius: 9999px; background: #fafafa; color: #0a0a0a; font-weight: 500; text-decoration: none; transition: background 0.2s; }
+		.cs-bottom-nav a:hover { background: #d4d4d8; }
+		.cs-fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+		.cs-fade-up.cs-visible { opacity: 1; transform: translateY(0); }
+		@media (max-width: 640px) { .cs-hero { margin-top: 68px; } }
+	</style>
+
+	<!-- Theme init -->
+	<script src="../../../assets/js/theme-init.js"></script>
+
+	<!-- Shared portfolio styles -->
+	<link rel="stylesheet" type="text/css" href="../../../assets/vendors/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/vendors/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+	<!-- Material Icons for shared nav -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav id="header" class="header case-study nav-dark-forced">
+		<div class="container">
+			<div class="nav-left">
+				<div class="logo-wrapper valign-wrapper center-align">
+					<a href="../../../index.html" class="valign-wrapper">
+						<img class="logo" src="../../../index.htmlassets/images/my-name.webp" loading="lazy">
+					</a>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-mobile">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../../index.html#work">all projects</a>
+					<a class="strike-through" href="../">back</a>
+					<a class="strike-through" href="../poker/">next project</a>
+					<a class="strike-through" href="../../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+			<div class="nav-right hidden-on-large">
+				<div class="valign-wrapper">
+					<a class="strike-through" href="../../../index.html#work"><i class="material-icons float-right">dashboard</i></a>
+					<a class="strike-through" href="../"><i class="material-icons float-right">arrow_back</i></a>
+					<a class="strike-through" href="../poker/"><i class="material-icons float-right">arrow_forward</i></a>
+					<a class="strike-through" href="../../../index.html#contact">contact</a>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+						<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Hero -->
+	<div class="cs-hero">
+		<img src="./images/Section 1.webp" alt="A23 Rummy" class="cs-hero__img" loading="eager">
+		<div class="cs-hero__overlay"></div>
+	</div>
+
+	<!-- Content -->
+	<div class="cs-container">
+
+		<!-- Header -->
+		<div class="cs-header cs-fade-up">
+			<a href="../" class="cs-back">← Back to A23</a>
+			<div class="cs-tags">
+				<span class="cs-tag--company">A23</span>
+				<span class="cs-tag">UX Strategy</span>
+				<span class="cs-tag">FinTech</span>
+				<span class="cs-tag">Gaming</span>
+				<span class="cs-tag">Retention</span>
+			</div>
+			<h1 class="cs-title">A23 Rummy</h1>
+			<h2 class="cs-subtitle">Simplifying Complexity to Drive Retention & Trust</h2>
+		</div>
+
+		<!-- Overview & Metadata -->
+		<div class="cs-overview cs-fade-up">
+			<div>
+				<h3 class="cs-label">Overview</h3>
+				<p class="cs-overview__text">I led the end-to-end redesign of critical user journeys within A23 Rummy, focusing on improving retention, usability, and trust in a high-stakes gaming environment.</p>
+			</div>
+			<div class="cs-meta">
+				<div>
+					<h3 class="cs-label">Role</h3>
+					<p class="cs-meta__value">Lead UX Designer</p>
+				</div>
+				<div>
+					<h3 class="cs-label">Timeline</h3>
+					<p class="cs-meta__value">Dec 2022 - Apr 2023</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Sections -->
+		<div class="cs-sections">
+
+			<!-- Overview Images -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">Overview</h3>
+				<p class="cs-section__content">I led the end-to-end redesign of critical user journeys within A23 Rummy, focusing on improving retention, usability, and trust in a high-stakes gaming environment.</p>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 1.webp" alt="Overview - 1" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 2.webp" alt="Overview - 2" loading="lazy"></div>
+				</div>
+			</div>
+
+			<!-- Project Details -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">Project details - Rummy lobby revamp</h3>
+				<p class="cs-section__content">Owned the UX strategy across onboarding, lobby, and gameplay entry. Mentored and guided 1 junior designer. Collaborated with Product Managers, Business stakeholders, and Compliance teams. Balanced UX improvements with regulatory and revenue constraints.</p>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 3.webp" alt="Project details - 1" loading="lazy"></div>
+				</div>
+			</div>
+
+			<!-- The Challenge -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">The Challenge</h3>
+				<p class="cs-section__content">A23 Rummy was experiencing low user retention and friction in core gameplay entry flows, driven by three key issues:</p>
+				<div class="cs-points cs-points--three">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Cognitive Overload</h4>
+						<p class="cs-point__desc">Too many game types and betting options caused users to struggle with quick decisions, leading to drop-offs.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Fragmented Onboarding</h4>
+						<p class="cs-point__desc">Multiple quick fixes over time led to a bloated flow, further complicated by government regulatory constraints.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">High Risk of Costly Misclicks</h4>
+						<p class="cs-point__desc">Users frequently selected incorrect bet amounts, resulting in financial anxiety and reduced trust in the platform.</p>
+					</div>
+				</div>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 4.webp" alt="The Challenge - 1" loading="lazy"></div>
+				</div>
+			</div>
+
+			<!-- Strategy & Ideation -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">Strategy & Ideation</h3>
+				<p class="cs-section__content">Reduce cognitive load while increasing trust and control.</p>
+				<div class="cs-points">
+					<div class="cs-point">
+						<h4 class="cs-point__title">Simplification Without Limiting Choice</h4>
+						<p class="cs-point__desc">Reorganized game types and bet values into structured, scannable formats prioritizing progressive disclosure.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Transparency as a Trust Lever</h4>
+						<p class="cs-point__desc">Clearly communicated bonus vs cash usage and reduced ambiguity in real-money interactions.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Safer Gameplay Design</h4>
+						<p class="cs-point__desc">Introduced safeguards to prevent accidental high-value bets and encourage responsible gameplay.</p>
+					</div>
+					<div class="cs-point">
+						<h4 class="cs-point__title">Dual Optimization Strategy</h4>
+						<p class="cs-point__desc">Balanced clarity for new users with speed, familiarity, and minimal disruption for VIP users.</p>
+					</div>
+				</div>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 5.webp" alt="Strategy - 1" loading="lazy"></div>
+				</div>
+			</div>
+
+			<!-- My Approach -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">My Approach</h3>
+				<p class="cs-section__content">Streamlined previously fragmented flows, removing unnecessary steps from past quick fixes while ensuring strict regulatory compliance. Structured game types and bet amounts into clear, hierarchical layouts to reduce visual clutter and help users make confident decisions. Redesigned interactions to minimize accidental taps and provide clearer differentiation between bet tiers.</p>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 6.webp" alt="My Approach - 1" loading="lazy"></div>
+				</div>
+			</div>
+
+			<!-- Personas -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">Personas - High Roller, Casual Player, New commer</h3>
+				<p class="cs-section__content">Understanding our diverse user base was critical. We identified three primary personas to guide our design decisions:</p>
+				<div class="cs-table-wrap">
+					<table class="cs-table">
+						<thead>
+							<tr>
+								<th>Persona</th>
+								<th>Behavior</th>
+								<th>Needs</th>
+								<th>Pain Points</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>High Roller</td>
+								<td>Plays high stakes, frequent sessions</td>
+								<td>Speed, familiarity, quick re-buy</td>
+								<td>Drastic UI changes, slow animations</td>
+							</tr>
+							<tr>
+								<td>Casual Player</td>
+								<td>Plays mid-stakes, weekend warrior</td>
+								<td>Clear game rules, easy navigation</td>
+								<td>Cluttered lobby, confusing bet amounts</td>
+							</tr>
+							<tr>
+								<td>New Comer</td>
+								<td>First time player, learning the ropes</td>
+								<td>Guidance, safe environment, tutorials</td>
+								<td>Cognitive overload, fear of losing money</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 7.webp" alt="Personas - 1" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 9.webp" alt="Personas - 2" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 10.webp" alt="Personas - 3" loading="lazy"></div>
+				</div>
+			</div>
+
+			<!-- Measured Impact -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">Measured Impact</h3>
+				<p class="cs-section__content">By simplifying decision-making and increasing transparency, the platform achieved higher user confidence in gameplay, reduced friction in core flows, and stronger retention across user segments.</p>
+				<div class="cs-metrics">
+					<div class="cs-metric">
+						<span class="cs-metric__value">75%</span>
+						<span class="cs-metric__label">D1 Retention</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">38%</span>
+						<span class="cs-metric__label">D7 Retention</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">11%</span>
+						<span class="cs-metric__label">D30 Retention</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+20%</span>
+						<span class="cs-metric__label">Games Played</span>
+					</div>
+					<div class="cs-metric">
+						<span class="cs-metric__value">+40%</span>
+						<span class="cs-metric__label">New User Funnel</span>
+					</div>
+				</div>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 11.webp" alt="Impact - 1" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 12.webp" alt="Impact - 2" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 13.webp" alt="Impact - 3" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 14.webp" alt="Impact - 4" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 15.webp" alt="Impact - 5" loading="lazy"></div>
+					<div class="cs-image-wrap"><img src="./images/Section 16.webp" alt="Impact - 6" loading="lazy"></div>
+				</div>
+			</div>
+
+			<!-- Reflection -->
+			<div class="cs-section cs-fade-up">
+				<h3 class="cs-section__title">Reflection</h3>
+				<p class="cs-section__content">This project reinforced the importance of designing for high-stakes environments where mistakes have real consequences. It was a masterclass in balancing business goals, user trust, and complex regulatory constraints while scaling experiences for both novice and expert users.</p>
+				<div class="cs-images">
+					<div class="cs-image-wrap"><img src="./images/Section 17.webp" alt="Reflection - 1" loading="lazy"></div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Bottom Navigation -->
+		<div class="cs-bottom-nav">
+			<a href="../">Explore More Work</a>
+		</div>
+
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			var observer = new IntersectionObserver(function(entries) {
+				entries.forEach(function(entry) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('cs-visible');
+					}
+				});
+			}, { threshold: 0.1, rootMargin: '-50px' });
+			document.querySelectorAll('.cs-fade-up').forEach(function(el) {
+				observer.observe(el);
+			});
+		});
+	</script>
+
+	<script>
+		(function() {
+			var saved = localStorage.getItem('portfolio-theme') || 'light';
+			document.documentElement.setAttribute('data-theme', saved);
+		})();
+		function toggleTheme() {
+			var current = document.documentElement.getAttribute('data-theme') || 'light';
+			var next = current === 'dark' ? 'light' : 'dark';
+			document.documentElement.setAttribute('data-theme', next);
+			localStorage.setItem('portfolio-theme', next);
+		}
+		document.querySelectorAll('.theme-toggle').forEach(function(btn) {
+			btn.addEventListener('click', toggleTheme);
+		});
+	</script>
+</body>
+</html>
